@@ -1410,7 +1410,7 @@ body {
 
   .container2 {
     top: 56%;
-    transform: translate(-50%, -46%) scale(1.075);
+    transform: translate(-50%, -46%) scale(1.236);
   }
 }
 
@@ -1422,12 +1422,12 @@ body {
 
   .container2 {
     top: 57%;
-    transform: translate(-50%, -45%) scale(0.987);
+    transform: translate(-50%, -45%) scale(1.135);
   }
 }
 
 @media (max-width: 380px) {
   .container2 {
-    transform: translate(-50%, -45%) scale(0.936);
+    transform: translate(-50%, -45%) scale(1.076);
   }
 }
