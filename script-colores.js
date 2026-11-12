@@ -95,28 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setTheme(theme) {
     currentTheme = theme;
-
-    // Efecto dissolve suave: breve blur + fade → aplica tema → restaura
-    roseContainer.style.transition = "filter 0.25s ease, opacity 0.25s ease";
-    roseContainer.style.filter = "blur(6px) brightness(1.4)";
-    roseContainer.style.opacity = "0.55";
-
-    setTimeout(function () {
-      if (theme === "blue") {
-        body.removeAttribute("data-theme");
-      } else {
-        body.setAttribute("data-theme", theme);
-      }
-      currentThemeIndex = themeList.indexOf(theme);
-      try {
-        localStorage.setItem("rose_permanent_color", theme);
-      } catch (e) {}
-
-      roseContainer.style.transition = "filter 0.5s ease, opacity 0.5s ease";
-      roseContainer.style.filter = "";
-      roseContainer.style.opacity = "";
-      spawnSparklesAroundRose(30);
-    }, 240);
+    if (theme === "blue") {
+      body.removeAttribute("data-theme");
+    } else {
+      body.setAttribute("data-theme", theme);
+    }
+    currentThemeIndex = themeList.indexOf(theme);
+    try {
+      localStorage.setItem("rose_permanent_color", theme);
+    } catch (e) {}
+    spawnSparklesAroundRose(30);
   }
 
   function startCycle(intervalMs) {
