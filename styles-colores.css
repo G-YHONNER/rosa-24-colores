@@ -1,0 +1,1316 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@5.0.1/index.min.css');
+
+/* ==========================================================================
+   ROSA MULTICOLOR • INSPIRADA EN LOS COLORES DE LOS TULIPANES
+   ========================================================================== */
+
+:root {
+  /* Paleta 1: Azul Zafiro (Original) */
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #0d214d 0%, #06112c 45%, #020512 100%);
+  --petal-center: #0084ff;
+  --petal-center-shadow: #80d8ff;
+  --petal-mid: #0d52ba;
+  --petal-outer: #1967d2;
+  --petal-glow: #29b6f6;
+  --petal-glow-shadow: #80d8ff;
+  --petal-shadow: rgba(0, 162, 255, 0.5);
+  --petal-shadow-soft: rgba(0, 162, 255, 0.35);
+  --dead-petal: #0084ff;
+  --dead-petal-end: #0a2550;
+  --dead-petal-shadow: rgba(0, 162, 255, 0.5);
+  --text-color: #ffffff;
+  --text-glow: rgba(0, 162, 255, 0.8);
+  --ui-glass: rgba(13, 33, 77, 0.65);
+  --ui-border: rgba(128, 216, 255, 0.3);
+  --ui-hover: rgba(0, 132, 255, 0.35);
+  --ui-active-glow: rgba(0, 162, 255, 0.6);
+  --sparkle-rgb: 128, 216, 255;
+}
+
+/* Paleta 2: Rosa Pastel (Tulipán Rosa - Suave y Natural) */
+body[data-theme="pink"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #3a1528 0%, #1e0915 45%, #0a0307 100%);
+  --petal-center: #f7a8be;
+  --petal-center-shadow: #ffd6e2;
+  --petal-mid: #db5982;
+  --petal-outer: #9e2d53;
+  --petal-glow: #ff7597;
+  --petal-glow-shadow: rgba(255, 117, 151, 0.4);
+  --petal-shadow: rgba(158, 45, 83, 0.4);
+  --petal-shadow-soft: rgba(158, 45, 83, 0.25);
+  --dead-petal: #f7a8be;
+  --dead-petal-end: #400d1e;
+  --dead-petal-shadow: rgba(219, 89, 130, 0.45);
+  --text-color: #fff0f5;
+  --text-glow: rgba(255, 117, 151, 0.85);
+  --ui-glass: rgba(58, 21, 40, 0.65);
+  --ui-border: rgba(247, 168, 190, 0.35);
+  --ui-hover: rgba(219, 89, 130, 0.35);
+  --ui-active-glow: rgba(255, 117, 151, 0.6);
+  --sparkle-rgb: 255, 168, 190;
+}
+
+/* Paleta 3: Violeta Encantado (Tulipán Violeta) */
+body[data-theme="purple"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #3b105c 0%, #1b072e 45%, #0b0214 100%);
+  --petal-center: #ab47bc;
+  --petal-center-shadow: #e1bee7;
+  --petal-mid: #7b1fa2;
+  --petal-outer: #4a0e4e;
+  --petal-glow: #ce93d8;
+  --petal-glow-shadow: #f3e5f5;
+  --petal-shadow: rgba(171, 71, 188, 0.55);
+  --petal-shadow-soft: rgba(171, 71, 188, 0.35);
+  --dead-petal: #ab47bc;
+  --dead-petal-end: #270634;
+  --dead-petal-shadow: rgba(171, 71, 188, 0.5);
+  --text-color: #f3e5f5;
+  --text-glow: rgba(206, 147, 216, 0.85);
+  --ui-glass: rgba(59, 16, 92, 0.65);
+  --ui-border: rgba(206, 147, 216, 0.35);
+  --ui-hover: rgba(171, 71, 188, 0.35);
+  --ui-active-glow: rgba(206, 147, 216, 0.6);
+  --sparkle-rgb: 206, 147, 216;
+}
+
+/* Paleta 4: Rubí Pasión (Tulipán Rubí) */
+body[data-theme="ruby"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #520b1f 0%, #2b0610 45%, #140206 100%);
+  --petal-center: #e91e63;
+  --petal-center-shadow: #f8bbd0;
+  --petal-mid: #ad1457;
+  --petal-outer: #5e081c;
+  --petal-glow: #ff4081;
+  --petal-glow-shadow: #ffebee;
+  --petal-shadow: rgba(233, 30, 99, 0.55);
+  --petal-shadow-soft: rgba(233, 30, 99, 0.35);
+  --dead-petal: #e91e63;
+  --dead-petal-end: #380512;
+  --dead-petal-shadow: rgba(233, 30, 99, 0.5);
+  --text-color: #ffebee;
+  --text-glow: rgba(255, 64, 129, 0.85);
+  --ui-glass: rgba(82, 11, 31, 0.65);
+  --ui-border: rgba(255, 64, 129, 0.35);
+  --ui-hover: rgba(233, 30, 99, 0.35);
+  --ui-active-glow: rgba(255, 64, 129, 0.6);
+  --sparkle-rgb: 255, 105, 180;
+}
+
+/* Paleta 5: Oro Estelar (Tulipán Oro) */
+body[data-theme="gold"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #522f0c 0%, #291705 45%, #140c02 100%);
+  --petal-center: #ffb300;
+  --petal-center-shadow: #fff8e1;
+  --petal-mid: #f57f17;
+  --petal-outer: #663d00;
+  --petal-glow: #ffe082;
+  --petal-glow-shadow: #fffde7;
+  --petal-shadow: rgba(255, 179, 0, 0.55);
+  --petal-shadow-soft: rgba(255, 179, 0, 0.35);
+  --dead-petal: #ffb300;
+  --dead-petal-end: #3a1d00;
+  --dead-petal-shadow: rgba(255, 179, 0, 0.5);
+  --text-color: #fffde7;
+  --text-glow: rgba(255, 224, 130, 0.85);
+  --ui-glass: rgba(82, 47, 12, 0.65);
+  --ui-border: rgba(255, 224, 130, 0.35);
+  --ui-hover: rgba(255, 179, 0, 0.35);
+  --ui-active-glow: rgba(255, 224, 130, 0.6);
+  --sparkle-rgb: 255, 215, 0;
+}
+
+/* Paleta 6: Cristal Aurora (Tulipán Cian / Hielo) */
+body[data-theme="cyan"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #0c474f 0%, #05262b 45%, #021214 100%);
+  --petal-center: #00e5ff;
+  --petal-center-shadow: #e0f7fa;
+  --petal-mid: #00897b;
+  --petal-outer: #004d40;
+  --petal-glow: #84ffff;
+  --petal-glow-shadow: #e0f2f1;
+  --petal-shadow: rgba(0, 229, 255, 0.55);
+  --petal-shadow-soft: rgba(0, 229, 255, 0.35);
+  --dead-petal: #00e5ff;
+  --dead-petal-end: #002824;
+  --dead-petal-shadow: rgba(0, 229, 255, 0.5);
+  --text-color: #e0f7fa;
+  --text-glow: rgba(132, 255, 255, 0.85);
+  --ui-glass: rgba(12, 71, 79, 0.65);
+  --ui-border: rgba(132, 255, 255, 0.35);
+  --ui-hover: rgba(0, 229, 255, 0.35);
+  --ui-active-glow: rgba(132, 255, 255, 0.6);
+  --sparkle-rgb: 132, 255, 255;
+}
+
+/* Paleta 7: Rojo Carmesí (Amor Verdadero) */
+body[data-theme="red"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #4a0d14 0%, #25060b 45%, #0f0204 100%);
+  --petal-center: #ff1744;
+  --petal-center-shadow: #ff8a80;
+  --petal-mid: #d50000;
+  --petal-outer: #8a0000;
+  --petal-glow: #ff5252;
+  --petal-glow-shadow: #ffebee;
+  --petal-shadow: rgba(213, 0, 0, 0.55);
+  --petal-shadow-soft: rgba(213, 0, 0, 0.35);
+  --dead-petal: #ff1744;
+  --dead-petal-end: #3b0000;
+  --dead-petal-shadow: rgba(213, 0, 0, 0.5);
+  --text-color: #ffebee;
+  --text-glow: rgba(255, 23, 68, 0.85);
+  --ui-glass: rgba(74, 13, 20, 0.65);
+  --ui-border: rgba(255, 23, 68, 0.35);
+  --ui-hover: rgba(213, 0, 0, 0.35);
+  --ui-active-glow: rgba(255, 23, 68, 0.6);
+  --sparkle-rgb: 255, 60, 60;
+}
+
+/* Paleta 8: Esmeralda Mágico (Naturaleza Viva) */
+body[data-theme="emerald"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #0d381e 0%, #061f10 45%, #020d07 100%);
+  --petal-center: #00e676;
+  --petal-center-shadow: #b9f6ca;
+  --petal-mid: #00c853;
+  --petal-outer: #006020;
+  --petal-glow: #69f0ae;
+  --petal-glow-shadow: #e8f5e9;
+  --petal-shadow: rgba(0, 200, 83, 0.55);
+  --petal-shadow-soft: rgba(0, 200, 83, 0.35);
+  --dead-petal: #00e676;
+  --dead-petal-end: #003310;
+  --dead-petal-shadow: rgba(0, 200, 83, 0.5);
+  --text-color: #e8f5e9;
+  --text-glow: rgba(0, 230, 118, 0.85);
+  --ui-glass: rgba(13, 56, 30, 0.65);
+  --ui-border: rgba(0, 230, 118, 0.35);
+  --ui-hover: rgba(0, 200, 83, 0.35);
+  --ui-active-glow: rgba(0, 230, 118, 0.6);
+  --sparkle-rgb: 0, 230, 118;
+}
+
+/* Paleta 9: Ámbar Atardecer (Calidez Radiante) */
+body[data-theme="orange"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #4a2106 0%, #291102 45%, #120701 100%);
+  --petal-center: #ff6d00;
+  --petal-center-shadow: #ffe0b2;
+  --petal-mid: #f55100;
+  --petal-outer: #bf360c;
+  --petal-glow: #ff9100;
+  --petal-glow-shadow: #fff3e0;
+  --petal-shadow: rgba(255, 109, 0, 0.55);
+  --petal-shadow-soft: rgba(255, 109, 0, 0.35);
+  --dead-petal: #ff6d00;
+  --dead-petal-end: #401202;
+  --dead-petal-shadow: rgba(255, 109, 0, 0.5);
+  --text-color: #fff3e0;
+  --text-glow: rgba(255, 145, 0, 0.85);
+  --ui-glass: rgba(74, 33, 6, 0.65);
+  --ui-border: rgba(255, 145, 0, 0.35);
+  --ui-hover: rgba(255, 109, 0, 0.35);
+  --ui-active-glow: rgba(255, 145, 0, 0.6);
+  --sparkle-rgb: 255, 145, 0;
+}
+
+/* Paleta 10: Blanco Perla (Pureza y Luz) */
+body[data-theme="white"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #1e2638 0%, #0d121c 45%, #05070a 100%);
+  --petal-center: #f0f4f8;
+  --petal-center-shadow: #ffffff;
+  --petal-mid: #cfd8dc;
+  --petal-outer: #78909c;
+  --petal-glow: #ffffff;
+  --petal-glow-shadow: #e2e8f0;
+  --petal-shadow: rgba(255, 255, 255, 0.6);
+  --petal-shadow-soft: rgba(255, 255, 255, 0.4);
+  --dead-petal: #eceff1;
+  --dead-petal-end: #37474f;
+  --dead-petal-shadow: rgba(255, 255, 255, 0.5);
+  --text-color: #ffffff;
+  --text-glow: rgba(255, 255, 255, 0.9);
+  --ui-glass: rgba(30, 38, 56, 0.65);
+  --ui-border: rgba(255, 255, 255, 0.4);
+  --ui-hover: rgba(255, 255, 255, 0.25);
+  --ui-active-glow: rgba(255, 255, 255, 0.7);
+  --sparkle-rgb: 240, 248, 255;
+}
+
+/* Paleta 11: Negro Medianoche (Misterio Infinito) */
+body[data-theme="black"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #1c0e2a 0%, #0d0615 45%, #040107 100%);
+  --petal-center: #4a4a4a;
+  --petal-center-shadow: #9c27b0;
+  --petal-mid: #2b2b2b;
+  --petal-outer: #121212;
+  --petal-glow: #ba68c8;
+  --petal-glow-shadow: #e1bee7;
+  --petal-shadow: rgba(186, 104, 200, 0.55);
+  --petal-shadow-soft: rgba(186, 104, 200, 0.35);
+  --dead-petal: #383838;
+  --dead-petal-end: #0a0a0a;
+  --dead-petal-shadow: rgba(186, 104, 200, 0.5);
+  --text-color: #f3e5f5;
+  --text-glow: rgba(186, 104, 200, 0.85);
+  --ui-glass: rgba(28, 14, 42, 0.75);
+  --ui-border: rgba(186, 104, 200, 0.35);
+  --ui-hover: rgba(156, 39, 176, 0.35);
+  --ui-active-glow: rgba(186, 104, 200, 0.6);
+  --sparkle-rgb: 186, 104, 200;
+}
+
+/* Paleta 12: Coral Neón (Energía y Pasión) */
+body[data-theme="coral"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #4a191f 0%, #260a0e 45%, #100305 100%);
+  --petal-center: #ff5252;
+  --petal-center-shadow: #ffab91;
+  --petal-mid: #ff6e40;
+  --petal-outer: #d84315;
+  --petal-glow: #ff7043;
+  --petal-glow-shadow: #fbe9e7;
+  --petal-shadow: rgba(255, 110, 64, 0.55);
+  --petal-shadow-soft: rgba(255, 110, 64, 0.35);
+  --dead-petal: #ff5252;
+  --dead-petal-end: #3e1208;
+  --dead-petal-shadow: rgba(255, 110, 64, 0.5);
+  --text-color: #fbe9e7;
+  --text-glow: rgba(255, 112, 67, 0.85);
+  --ui-glass: rgba(74, 25, 31, 0.65);
+  --ui-border: rgba(255, 112, 67, 0.35);
+  --ui-hover: rgba(255, 110, 64, 0.35);
+  --ui-active-glow: rgba(255, 112, 67, 0.6);
+  --sparkle-rgb: 255, 110, 64;
+}
+
+/* Paleta 13: Lavanda Imperial (Paz y Serenidad) */
+body[data-theme="lavender"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #2b1747 0%, #150926 45%, #080312 100%);
+  --petal-center: #b388ff;
+  --petal-center-shadow: #ede7f6;
+  --petal-mid: #7c4dff;
+  --petal-outer: #512da8;
+  --petal-glow: #d1c4e9;
+  --petal-glow-shadow: #f3e5f5;
+  --petal-shadow: rgba(179, 136, 255, 0.55);
+  --petal-shadow-soft: rgba(179, 136, 255, 0.35);
+  --dead-petal: #b388ff;
+  --dead-petal-end: #311b92;
+  --dead-petal-shadow: rgba(179, 136, 255, 0.5);
+  --text-color: #ede7f6;
+  --text-glow: rgba(179, 136, 255, 0.85);
+  --ui-glass: rgba(43, 23, 71, 0.65);
+  --ui-border: rgba(179, 136, 255, 0.35);
+  --ui-hover: rgba(124, 77, 255, 0.35);
+  --ui-active-glow: rgba(179, 136, 255, 0.6);
+  --sparkle-rgb: 179, 136, 255;
+}
+
+/* Paleta 14: Menta Fresca (Brisa Primaveral) */
+body[data-theme="mint"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #0a3d34 0%, #041f1a 45%, #010d0b 100%);
+  --petal-center: #1de9b6;
+  --petal-center-shadow: #e0f2f1;
+  --petal-mid: #00bfa5;
+  --petal-outer: #004d40;
+  --petal-glow: #a7ffeb;
+  --petal-glow-shadow: #e0fbf7;
+  --petal-shadow: rgba(29, 233, 182, 0.55);
+  --petal-shadow-soft: rgba(29, 233, 182, 0.35);
+  --dead-petal: #1de9b6;
+  --dead-petal-end: #00251f;
+  --dead-petal-shadow: rgba(29, 233, 182, 0.5);
+  --text-color: #e0f2f1;
+  --text-glow: rgba(29, 233, 182, 0.85);
+  --ui-glass: rgba(10, 61, 52, 0.65);
+  --ui-border: rgba(29, 233, 182, 0.35);
+  --ui-hover: rgba(0, 191, 165, 0.35);
+  --ui-active-glow: rgba(29, 233, 182, 0.6);
+  --sparkle-rgb: 29, 233, 182;
+}
+
+/* Paleta 15: Amarillo Girasol (Alegría y Vitalidad) */
+body[data-theme="yellow"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #4a4103 0%, #241f01 45%, #0f0d00 100%);
+  --petal-center: #ffea00;
+  --petal-center-shadow: #fffde7;
+  --petal-mid: #ffd600;
+  --petal-outer: #ff8f00;
+  --petal-glow: #ffff8d;
+  --petal-glow-shadow: #fff9c4;
+  --petal-shadow: rgba(255, 234, 0, 0.55);
+  --petal-shadow-soft: rgba(255, 234, 0, 0.35);
+  --dead-petal: #ffea00;
+  --dead-petal-end: #402400;
+  --dead-petal-shadow: rgba(255, 234, 0, 0.5);
+  --text-color: #fffde7;
+  --text-glow: rgba(255, 234, 0, 0.85);
+  --ui-glass: rgba(74, 65, 3, 0.65);
+  --ui-border: rgba(255, 234, 0, 0.35);
+  --ui-hover: rgba(255, 214, 0, 0.35);
+  --ui-active-glow: rgba(255, 234, 0, 0.6);
+  --sparkle-rgb: 255, 234, 0;
+}
+
+/* Paleta 16: Fucsia Neón (Pasión Eléctrica) */
+body[data-theme="magenta"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #4d052d 0%, #260216 45%, #12010a 100%);
+  --petal-center: #ff007f;
+  --petal-center-shadow: #ffb6c1;
+  --petal-mid: #c51162;
+  --petal-outer: #880e4f;
+  --petal-glow: #ff4081;
+  --petal-glow-shadow: #fce4ec;
+  --petal-shadow: rgba(255, 0, 127, 0.55);
+  --petal-shadow-soft: rgba(255, 0, 127, 0.35);
+  --dead-petal: #ff007f;
+  --dead-petal-end: #38001e;
+  --dead-petal-shadow: rgba(255, 0, 127, 0.5);
+  --text-color: #fce4ec;
+  --text-glow: rgba(255, 0, 127, 0.85);
+  --ui-glass: rgba(77, 5, 45, 0.65);
+  --ui-border: rgba(255, 0, 127, 0.35);
+  --ui-hover: rgba(197, 17, 98, 0.35);
+  --ui-active-glow: rgba(255, 0, 127, 0.6);
+  --sparkle-rgb: 255, 0, 127;
+}
+
+/* Paleta 17: Turquesa Océano (Profundidad Marina) */
+body[data-theme="turquoise"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #03364f 0%, #011b29 45%, #000c14 100%);
+  --petal-center: #00e5ff;
+  --petal-center-shadow: #e1f5fe;
+  --petal-mid: #00b0ff;
+  --petal-outer: #01579b;
+  --petal-glow: #80d8ff;
+  --petal-glow-shadow: #b3e5fc;
+  --petal-shadow: rgba(0, 229, 255, 0.55);
+  --petal-shadow-soft: rgba(0, 229, 255, 0.35);
+  --dead-petal: #00e5ff;
+  --dead-petal-end: #002f6c;
+  --dead-petal-shadow: rgba(0, 229, 255, 0.5);
+  --text-color: #e1f5fe;
+  --text-glow: rgba(0, 229, 255, 0.85);
+  --ui-glass: rgba(3, 54, 79, 0.65);
+  --ui-border: rgba(0, 229, 255, 0.35);
+  --ui-hover: rgba(0, 176, 255, 0.35);
+  --ui-active-glow: rgba(0, 229, 255, 0.6);
+  --sparkle-rgb: 0, 229, 255;
+}
+
+/* Paleta 18: Verde Lima (Energía Radiante) */
+body[data-theme="lime"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #294004 0%, #152102 45%, #090e01 100%);
+  --petal-center: #76ff03;
+  --petal-center-shadow: #f1f8e9;
+  --petal-mid: #64dd17;
+  --petal-outer: #33691e;
+  --petal-glow: #ccff90;
+  --petal-glow-shadow: #dcedc8;
+  --petal-shadow: rgba(118, 255, 3, 0.55);
+  --petal-shadow-soft: rgba(118, 255, 3, 0.35);
+  --dead-petal: #76ff03;
+  --dead-petal-end: #1b3800;
+  --dead-petal-shadow: rgba(118, 255, 3, 0.5);
+  --text-color: #f1f8e9;
+  --text-glow: rgba(118, 255, 3, 0.85);
+  --ui-glass: rgba(41, 64, 4, 0.65);
+  --ui-border: rgba(118, 255, 3, 0.35);
+  --ui-hover: rgba(100, 221, 23, 0.35);
+  --ui-active-glow: rgba(118, 255, 3, 0.6);
+  --sparkle-rgb: 118, 255, 3;
+}
+
+/* Paleta 19: Melocotón Suave (Dulzura y Encanto) */
+body[data-theme="peach"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #4a271c 0%, #24120c 45%, #100704 100%);
+  --petal-center: #ffab91;
+  --petal-center-shadow: #fbe9e7;
+  --petal-mid: #ff8a65;
+  --petal-outer: #d84315;
+  --petal-glow: #ffccbc;
+  --petal-glow-shadow: #fff3e0;
+  --petal-shadow: rgba(255, 171, 145, 0.55);
+  --petal-shadow-soft: rgba(255, 171, 145, 0.35);
+  --dead-petal: #ffab91;
+  --dead-petal-end: #4e1908;
+  --dead-petal-shadow: rgba(255, 171, 145, 0.5);
+  --text-color: #fbe9e7;
+  --text-glow: rgba(255, 171, 145, 0.85);
+  --ui-glass: rgba(74, 39, 28, 0.65);
+  --ui-border: rgba(255, 171, 145, 0.35);
+  --ui-hover: rgba(255, 138, 101, 0.35);
+  --ui-active-glow: rgba(255, 171, 145, 0.6);
+  --sparkle-rgb: 255, 171, 145;
+}
+
+/* Paleta 20: Índigo Galáctico (Cosmos Infinito) */
+body[data-theme="indigo"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #151a4f 0%, #090b26 45%, #030412 100%);
+  --petal-center: #536dfe;
+  --petal-center-shadow: #e8eaf6;
+  --petal-mid: #3d5afe;
+  --petal-outer: #1a237e;
+  --petal-glow: #8c9eff;
+  --petal-glow-shadow: #c5cae9;
+  --petal-shadow: rgba(83, 109, 254, 0.55);
+  --petal-shadow-soft: rgba(83, 109, 254, 0.35);
+  --dead-petal: #536dfe;
+  --dead-petal-end: #0d1252;
+  --dead-petal-shadow: rgba(83, 109, 254, 0.5);
+  --text-color: #e8eaf6;
+  --text-glow: rgba(83, 109, 254, 0.85);
+  --ui-glass: rgba(21, 26, 79, 0.65);
+  --ui-border: rgba(83, 109, 254, 0.35);
+  --ui-hover: rgba(61, 90, 254, 0.35);
+  --ui-active-glow: rgba(83, 109, 254, 0.6);
+  --sparkle-rgb: 83, 109, 254;
+}
+
+/* Paleta 21: Cobre Real (Elegancia Noble) */
+body[data-theme="bronze"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #472010 0%, #240e06 45%, #0f0502 100%);
+  --petal-center: #d77a38;
+  --petal-center-shadow: #fbe9e7;
+  --petal-mid: #a04a1b;
+  --petal-outer: #5c2406;
+  --petal-glow: #f4b282;
+  --petal-glow-shadow: #ffccbc;
+  --petal-shadow: rgba(215, 122, 56, 0.55);
+  --petal-shadow-soft: rgba(215, 122, 56, 0.35);
+  --dead-petal: #d77a38;
+  --dead-petal-end: #331303;
+  --dead-petal-shadow: rgba(215, 122, 56, 0.5);
+  --text-color: #fbe9e7;
+  --text-glow: rgba(215, 122, 56, 0.85);
+  --ui-glass: rgba(71, 32, 16, 0.65);
+  --ui-border: rgba(215, 122, 56, 0.35);
+  --ui-hover: rgba(160, 74, 27, 0.35);
+  --ui-active-glow: rgba(215, 122, 56, 0.6);
+  --sparkle-rgb: 215, 122, 56;
+}
+
+/* Paleta 22: Borgoña Vino (Seducción y Misterio) */
+body[data-theme="crimson"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #3b051c 0%, #1f020e 45%, #0d0106 100%);
+  --petal-center: #ad1457;
+  --petal-center-shadow: #f8bbd0;
+  --petal-mid: #880e4f;
+  --petal-outer: #3e0422;
+  --petal-glow: #c2185b;
+  --petal-glow-shadow: #fce4ec;
+  --petal-shadow: rgba(173, 20, 87, 0.55);
+  --petal-shadow-soft: rgba(173, 20, 87, 0.35);
+  --dead-petal: #ad1457;
+  --dead-petal-end: #200111;
+  --dead-petal-shadow: rgba(173, 20, 87, 0.5);
+  --text-color: #fce4ec;
+  --text-glow: rgba(194, 24, 91, 0.85);
+  --ui-glass: rgba(59, 5, 28, 0.65);
+  --ui-border: rgba(194, 24, 91, 0.35);
+  --ui-hover: rgba(136, 14, 79, 0.35);
+  --ui-active-glow: rgba(194, 24, 91, 0.6);
+  --sparkle-rgb: 194, 24, 91;
+}
+
+/* Paleta 23: Plata Lunar (Resplandor Lunar) */
+body[data-theme="silver"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #232a36 0%, #10141c 45%, #06080c 100%);
+  --petal-center: #e0e0e0;
+  --petal-center-shadow: #ffffff;
+  --petal-mid: #9e9e9e;
+  --petal-outer: #424242;
+  --petal-glow: #f5f5f5;
+  --petal-glow-shadow: #eeeeee;
+  --petal-shadow: rgba(224, 224, 224, 0.55);
+  --petal-shadow-soft: rgba(224, 224, 224, 0.35);
+  --dead-petal: #bdbdbd;
+  --dead-petal-end: #212121;
+  --dead-petal-shadow: rgba(224, 224, 224, 0.5);
+  --text-color: #ffffff;
+  --text-glow: rgba(224, 224, 224, 0.85);
+  --ui-glass: rgba(35, 42, 54, 0.65);
+  --ui-border: rgba(224, 224, 224, 0.35);
+  --ui-hover: rgba(158, 158, 158, 0.35);
+  --ui-active-glow: rgba(224, 224, 224, 0.6);
+  --sparkle-rgb: 224, 224, 224;
+}
+
+/* Paleta 24: Champaña Dorado (Celebración y Lujo) */
+body[data-theme="champagne"] {
+  --bg-radial: radial-gradient(ellipse at 50% 50%, #45361a 0%, #241b0b 45%, #0f0b04 100%);
+  --petal-center: #f7e7ce;
+  --petal-center-shadow: #fffde7;
+  --petal-mid: #d4af37;
+  --petal-outer: #8c7322;
+  --petal-glow: #fff8e7;
+  --petal-glow-shadow: #ffecb3;
+  --petal-shadow: rgba(247, 231, 206, 0.55);
+  --petal-shadow-soft: rgba(247, 231, 206, 0.35);
+  --dead-petal: #f7e7ce;
+  --dead-petal-end: #47390f;
+  --dead-petal-shadow: rgba(247, 231, 206, 0.5);
+  --text-color: #fff8e7;
+  --text-glow: rgba(212, 175, 55, 0.85);
+  --ui-glass: rgba(69, 54, 26, 0.65);
+  --ui-border: rgba(212, 175, 55, 0.35);
+  --ui-hover: rgba(212, 175, 55, 0.35);
+  --ui-active-glow: rgba(212, 175, 55, 0.6);
+  --sparkle-rgb: 247, 231, 206;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-touch-callout: none !important;
+  outline: none !important;
+}
+
+html,
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-radial);
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.8s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Canvas de polvo de estrellas / partículas */
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   BARRA DE CONTROLES GLASSMÓRFICA DE COLORES
+   ========================================================================== */
+.controls-bar {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: var(--ui-glass);
+  border: 1px solid var(--ui-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px var(--ui-active-glow);
+  transition: opacity 0.6s ease, transform 0.4s ease;
+  max-width: 95vw;
+  opacity: 1;
+}
+
+.controls-bar.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.controls-label {
+  color: var(--text-color);
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 2px;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.color-palette-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.color-btn .swatch {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.color-btn:hover {
+  transform: scale(1.18);
+}
+
+.color-btn.active {
+  border-color: #ffffff;
+  box-shadow: 0 0 12px var(--ui-active-glow);
+  transform: scale(1.15);
+}
+
+/* Colores de los swatches */
+.swatch-blue   { background: linear-gradient(135deg, #0084ff, #0d52ba); }
+.swatch-pink   { background: linear-gradient(135deg, #ffb8cb, #911f46); }
+.swatch-purple { background: linear-gradient(135deg, #ce93d8, #4a0e4e); }
+.swatch-ruby   { background: linear-gradient(135deg, #ff4081, #5e081c); }
+.swatch-gold   { background: linear-gradient(135deg, #ffe082, #663d00); }
+.swatch-cyan   { background: linear-gradient(135deg, #84ffff, #004d40); }
+.swatch-red     { background: linear-gradient(135deg, #ff1744, #8a0000); }
+.swatch-emerald { background: linear-gradient(135deg, #00e676, #006020); }
+.swatch-orange  { background: linear-gradient(135deg, #ff9100, #bf360c); }
+.swatch-white   { background: linear-gradient(135deg, #ffffff, #90a4ae); }
+.swatch-black   { background: linear-gradient(135deg, #424242, #111111); }
+.swatch-coral   { background: linear-gradient(135deg, #ff6e40, #d84315); }
+.swatch-lavender  { background: linear-gradient(135deg, #b388ff, #512da8); }
+.swatch-mint      { background: linear-gradient(135deg, #1de9b6, #004d40); }
+.swatch-yellow    { background: linear-gradient(135deg, #ffea00, #ff8f00); }
+.swatch-magenta   { background: linear-gradient(135deg, #ff007f, #880e4f); }
+.swatch-turquoise { background: linear-gradient(135deg, #00e5ff, #01579b); }
+.swatch-lime      { background: linear-gradient(135deg, #76ff03, #33691e); }
+.swatch-peach     { background: linear-gradient(135deg, #ffab91, #d84315); }
+.swatch-indigo    { background: linear-gradient(135deg, #536dfe, #1a237e); }
+.swatch-bronze    { background: linear-gradient(135deg, #d77a38, #5c2406); }
+.swatch-crimson   { background: linear-gradient(135deg, #ad1457, #3e0422); }
+.swatch-silver    { background: linear-gradient(135deg, #e0e0e0, #424242); }
+.swatch-champagne { background: linear-gradient(135deg, #f7e7ce, #8c7322); }
+
+/* Separador */
+.controls-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--ui-border);
+  margin: 0 2px;
+}
+
+/* Botón Auto Ciclo */
+.cycle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--ui-border);
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.cycle-btn:hover {
+  background: var(--ui-hover);
+  border-color: var(--text-color);
+}
+
+.cycle-btn.active {
+  background: var(--ui-hover);
+  border-color: #ffffff;
+  box-shadow: 0 0 10px var(--ui-active-glow);
+}
+
+/* Botón Control Celular */
+.remote-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--ui-border);
+  color: var(--text-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.remote-btn:hover {
+  background: var(--ui-hover);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 0 14px var(--ui-active-glow);
+}
+
+/* Indicador de conexión remoto */
+.remote-badge {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffb300;
+  box-shadow: 0 0 6px #ffb300;
+  transition: all 0.3s ease;
+}
+
+.remote-badge.connected {
+  background: #00e676;
+  box-shadow: 0 0 8px #00e676;
+}
+
+/* ==========================================================================
+   ESTRUCTURA BOTÁNICA DE LA ROSA
+   ========================================================================== */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.container2 {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 200px;
+  height: 350px;
+  transform: translate(-50%, -50%) scale(1.1);
+  transform-origin: center center;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  outline: none !important;
+}
+
+.container2 * {
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  outline: none !important;
+}
+
+/* Pétalos de la rosa */
+.container2 .petals > div {
+  position: absolute;
+  background: var(--petal-center);
+  width: 45px;
+  height: 80px;
+  top: 55px;
+  transition: background 0.6s ease, box-shadow 0.6s ease, transform 0.5s ease-out;
+  border: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08);
+}
+
+.container2 .petals > div:nth-child(1) {
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px var(--petal-center-shadow);
+  left: 80px;
+  top: 60px;
+  background: var(--petal-center);
+}
+
+.container2 .petals > div:nth-child(2),
+.container2 .petals > div:nth-child(4),
+.container2 .petals > div:nth-child(6) {
+  background: var(--petal-mid);
+  left: 60px;
+  border-radius: 0px 30px 0px 30px;
+  transform-origin: bottom right;
+}
+
+.container2 .petals > div:nth-child(3),
+.container2 .petals > div:nth-child(5),
+.container2 .petals > div:nth-child(7) {
+  background: var(--petal-mid);
+  left: 100px;
+  border-radius: 30px 0px 30px 0px;
+  transform-origin: bottom left;
+}
+
+.container2 .petals > div:nth-child(2) {
+  z-index: 5;
+  top: 75px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--petal-center) 0%, var(--petal-mid) 85%);
+  box-shadow: 0px 0px 30px var(--petal-shadow), inset 0 0 6px rgba(0, 0, 0, 0.08);
+  animation: glowing 2.5s ease-in-out infinite;
+}
+
+.container2 .petals > div:nth-child(3) {
+  z-index: 4;
+  top: 75px;
+  height: 70px;
+  background: linear-gradient(225deg, var(--petal-center) 0%, var(--petal-mid) 85%);
+  box-shadow: 0px 0px 30px var(--petal-shadow), inset 0 0 6px rgba(0, 0, 0, 0.08);
+  animation: glowing 2.5s ease-in-out infinite;
+}
+
+.container2 .petals > div:nth-child(4) {
+  z-index: 3;
+  top: 70px;
+  height: 75px;
+  background: var(--petal-mid);
+  box-shadow: 0px 0px 30px var(--petal-shadow), inset 0 0 6px rgba(0, 0, 0, 0.1);
+  animation: bloom4 3s ease-in-out forwards, glowing 2.5s ease-in-out infinite;
+}
+
+.container2 .petals > div:nth-child(5) {
+  z-index: 2;
+  top: 70px;
+  height: 75px;
+  background: var(--petal-mid);
+  box-shadow: 0px 0px 30px var(--petal-shadow), inset 0 0 6px rgba(0, 0, 0, 0.1);
+  animation: bloom5 3s ease-in-out forwards, glowing 2.5s ease-in-out infinite;
+}
+
+.container2 .petals > div:nth-child(6) {
+  z-index: 1;
+  background: var(--petal-outer);
+  top: 65px;
+  height: 70px;
+  box-shadow: 0px 0px 30px var(--petal-shadow-soft), inset 0 0 6px rgba(0, 0, 0, 0.12);
+  animation: bloom6 3s ease-in-out forwards, glowing 2.5s ease-in-out infinite;
+}
+
+.container2 .petals > div:nth-child(7) {
+  z-index: 0;
+  background: var(--petal-outer);
+  top: 65px;
+  height: 70px;
+  box-shadow: 0px 0px 30px var(--petal-shadow-soft), inset 0 0 6px rgba(0, 0, 0, 0.12);
+  animation: bloom7 3s ease-in-out forwards, glowing 2.5s ease-in-out infinite;
+}
+
+/* Pétalos caídos */
+.container2 .deadPetals > div {
+  position: absolute;
+  background: var(--dead-petal);
+  width: 20px;
+  height: 15px;
+  top: 120px;
+  border-radius: 0px 30px 0px 30px;
+  box-shadow: 0px 0px 30px var(--dead-petal-shadow);
+  transition: background 0.6s ease, box-shadow 0.6s ease;
+}
+
+.container2 .deadPetals > div:nth-child(1) {
+  left: 97px;
+  transform: rotate(-30deg);
+  animation: falling 20s 4s ease-in-out infinite;
+}
+
+.container2 .deadPetals > div:nth-child(2) {
+  left: 113px;
+  transform: rotate(-30deg);
+  animation: falling 20s 8s ease-in-out infinite;
+}
+
+.container2 .deadPetals > div:nth-child(3) {
+  left: 103px;
+  transform: rotate(-30deg);
+  animation: falling 20s 12s ease-in-out infinite;
+}
+
+.container2 .deadPetals > div:nth-child(4) {
+  left: 107px;
+  transform: rotate(-30deg);
+  animation: falling 20s 16s ease-in-out infinite;
+}
+
+/* Hojas y tallo */
+.container2 .leaves > div:nth-last-child(1) {
+  position: absolute;
+  width: 55px;
+  height: 30px;
+  background: #338f37;
+  top: 120px;
+  left: 75px;
+  border-radius: 100px;
+}
+
+.container2 .leaves > div:nth-child(1) {
+  position: absolute;
+  width: 6px;
+  height: 210px;
+  background: #054c05;
+  top: 95px;
+  left: 100px;
+  border-radius: 0 0 100px 100px;
+}
+
+.container2 .leaves > div:nth-child(2) {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  border-radius: 5px 40px 20px 40px;
+  background: #054c05;
+  transform-origin: bottom;
+  transform: rotate(-30deg);
+  top: 180px;
+  left: 80px;
+  box-shadow: inset 5px 5px #066406;
+}
+
+.container2 .leaves > div:nth-child(3) {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  border-radius: 40px 5px 40px 20px;
+  background: #054c05;
+  transform-origin: bottom;
+  transform: rotate(30deg);
+  top: 150px;
+  left: 95px;
+  box-shadow: inset -5px 5px #066406;
+}
+
+/* Espinas */
+.container2 .thorns > div {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.container2 .thorns > div:nth-child(odd) {
+  border-left: 5px solid #054c05;
+  left: 105px;
+}
+
+.container2 .thorns > div:nth-child(even) {
+  border-right: 5px solid #054c05;
+  left: 95px;
+}
+
+.container2 .thorns > div:nth-child(1) { top: 200px; }
+.container2 .thorns > div:nth-child(2) { top: 170px; }
+.container2 .thorns > div:nth-child(3) { top: 140px; }
+.container2 .thorns > div:nth-child(4) { top: 230px; }
+
+/* Animaciones */
+@keyframes bloom4 {
+  100% { transform: rotate(-20deg); }
+}
+
+@keyframes bloom5 {
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes bloom6 {
+  100% { transform: rotate(-5deg); }
+}
+
+@keyframes bloom7 {
+  100% { transform: rotate(5deg); }
+}
+
+@keyframes glowing {
+  50% {
+    filter: brightness(1.08);
+    box-shadow: 0px 0px 35px var(--petal-glow-shadow);
+  }
+}
+
+@keyframes falling {
+  20% {
+    top: 335px;
+    background: var(--dead-petal-end);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  100% {
+    top: 335px;
+    opacity: 0;
+  }
+}
+
+/* Mensaje y frases arriba de la rosa (en Cascadia Code) */
+.rose-message-container,
+.footer-text {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  width: 90%;
+  max-width: 650px;
+}
+
+.rose-message-container h2,
+.footer-text h2 {
+  font-family: 'Cascadia Code', 'Cascadia Mono', Consolas, 'Fira Code', Courier, monospace;
+  color: var(--text-color);
+  font-size: 1.63rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-shadow: 0px 0px 18px var(--text-glow);
+  transition: color 0.6s ease, text-shadow 0.6s ease;
+  min-height: 2.1rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.rose-message-container p,
+.footer-text p {
+  font-family: 'Cascadia Code', 'Cascadia Mono', Consolas, 'Fira Code', Courier, monospace;
+  color: var(--text-color);
+  font-size: 1.0rem;
+  opacity: 0.85;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 10px var(--text-glow);
+  transition: color 0.6s ease, text-shadow 0.6s ease;
+}
+
+/* ==========================================================================
+   MODAL PARA CÓDIGO QR Y CONTROL REMOTO
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--ui-glass);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--ui-active-glow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 28px 24px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  color: var(--text-color);
+  position: relative;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-overlay.open .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--text-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-subtitle {
+  font-size: 0.82rem;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+
+.qr-box-wrapper {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  margin-bottom: 16px;
+}
+
+#qrcode-container {
+  width: 170px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#qrcode-container img, #qrcode-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.room-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--ui-border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+.room-code {
+  font-family: monospace;
+  font-weight: 700;
+  color: #ffd54f;
+  letter-spacing: 1px;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--ui-hover);
+  border: 1px solid var(--text-color);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--ui-active-glow);
+}
+
+.connection-status-text {
+  font-size: 0.78rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  opacity: 0.85;
+}
+
+/* Responsividad completa de la Rosa para Celulares */
+@media (max-width: 650px) {
+  .rose-message-container,
+  .footer-text {
+    top: 11%;
+    width: 92%;
+  }
+
+  .rose-message-container h2,
+  .footer-text h2 {
+    font-size: 1.31rem;
+    letter-spacing: 0.5px;
+  }
+
+  .rose-message-container p,
+  .footer-text p {
+    font-size: 0.86rem;
+  }
+
+  .container2 {
+    top: 56%;
+    transform: translate(-50%, -46%) scale(1.075);
+  }
+}
+
+@media (max-height: 720px) {
+  .rose-message-container,
+  .footer-text {
+    top: 8%;
+  }
+
+  .container2 {
+    top: 57%;
+    transform: translate(-50%, -45%) scale(0.987);
+  }
+}
+
+@media (max-width: 380px) {
+  .container2 {
+    transform: translate(-50%, -45%) scale(0.936);
+  }
+}
