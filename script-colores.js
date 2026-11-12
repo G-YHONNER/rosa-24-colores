@@ -86,9 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
   const titleEl = document.getElementById("roseTitle");
   const subtitleEl = document.getElementById("roseSubtitle");
+  const clockEl = document.getElementById("neonClock");
   const roseContainer = document.querySelector(".container2");
   const canvas = document.getElementById("particles-canvas");
   const ctx = canvas.getContext("2d");
+
+  // Reloj Digital Neón en Tiempo Real (Solo números)
+  function updateNeonClock() {
+    if (!clockEl) return;
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, "0");
+    const m = String(now.getMinutes()).padStart(2, "0");
+    const s = String(now.getSeconds()).padStart(2, "0");
+    clockEl.textContent = h + ":" + m + ":" + s;
+  }
+  updateNeonClock();
+  setInterval(updateNeonClock, 1000);
 
   const TOPIC = "yhonner/rose/yhonner-rosa-magica";
   const RELAY_TOPIC = "yhonner_rose_magic_remote_9482";
