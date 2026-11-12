@@ -1104,6 +1104,85 @@ body {
   }
 }
 
+/* Zonas y Botones de Navegación Lateral (Espacios vacíos al costado de la rosa) */
+.side-touch-zone {
+  position: absolute;
+  top: 35%;
+  height: 45%;
+  width: 28%;
+  max-width: 250px;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.side-touch-zone.left-zone {
+  left: 0;
+  justify-content: flex-end;
+  padding-right: 25px;
+}
+
+.side-touch-zone.right-zone {
+  right: 0;
+  justify-content: flex-start;
+  padding-left: 25px;
+}
+
+.nav-rose-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--ui-glass);
+  border: 1.5px solid var(--ui-border);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 0 15px var(--ui-active-glow);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  outline: none;
+  pointer-events: auto;
+}
+
+.side-touch-zone:hover .nav-rose-btn,
+.nav-rose-btn:hover {
+  transform: scale(1.16);
+  border-color: #ffffff;
+  background: var(--ui-hover);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.55), 0 0 25px var(--ui-active-glow);
+}
+
+.side-touch-zone:active .nav-rose-btn,
+.nav-rose-btn:active {
+  transform: scale(0.92);
+}
+
+@media (max-width: 600px) {
+  .side-touch-zone {
+    width: 24%;
+  }
+  .side-touch-zone.left-zone {
+    padding-right: 12px;
+  }
+  .side-touch-zone.right-zone {
+    padding-left: 12px;
+  }
+  .nav-rose-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .nav-rose-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 /* Mensaje y frases arriba de la rosa (en Cascadia Code) */
 .rose-message-container,
 .footer-text {

@@ -233,6 +233,55 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Navegación de Colores Lateral (Retroceder / Adelantar)
+  function prevColor() {
+    currentThemeIndex = (currentThemeIndex - 1 + themeList.length) % themeList.length;
+    setTheme(themeList[currentThemeIndex], false);
+  }
+
+  function nextColor() {
+    currentThemeIndex = (currentThemeIndex + 1) % themeList.length;
+    setTheme(themeList[currentThemeIndex], false);
+  }
+
+  const prevBtn = document.getElementById("prevColorBtn");
+  const nextBtn = document.getElementById("nextColorBtn");
+  const prevZone = document.getElementById("prevTouchZone");
+  const nextZone = document.getElementById("nextTouchZone");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      prevColor();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      nextColor();
+    });
+  }
+
+  if (prevZone) {
+    prevZone.addEventListener("click", function (e) {
+      prevColor();
+    });
+  }
+
+  if (nextZone) {
+    nextZone.addEventListener("click", function (e) {
+      nextColor();
+    });
+  }
+
+  // Navegación con flechas del teclado
+  document.addEventListener("keydown", function (e) {
+    if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
+    if (e.key === "ArrowLeft") prevColor();
+    if (e.key === "ArrowRight") nextColor();
+  });
+
   // Sincronización instantánea entre múltiples pestañas del mismo navegador
   window.addEventListener("storage", function (e) {
     if (e.key === "rose_permanent_phrase") {
